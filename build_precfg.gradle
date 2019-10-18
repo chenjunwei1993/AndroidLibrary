@@ -1,0 +1,14 @@
+int defMinSdkVersion = 19
+int defTargetSdkVersion = 28
+int defCompileSdkVersion = 29
+
+String defDebug = "false"
+String defPreVersion = "-201908071345"//模块和组件所用到的版本
+
+ext {
+    minSdkVersion = defMinSdkVersion
+    targetSdkVersion = defTargetSdkVersion
+    compileSdkVersion = defCompileSdkVersion
+    debugMode = defDebug
+    preVersion = defPreVersion
+}

@@ -1,0 +1,23 @@
+//打包配置文件
+//应用名称
+String defAppName = "CoreImageLoader"
+//默认包名
+String defPackage = "com.chenjunwei.coreimageloader"
+String defVersionName = "1.0.0"
+int defVersionCode = 1
+//打包签名信息
+String defKeyAlias = "chenjunwei"
+String defStorePassword = "123456"
+String defKeyPassword = "123456"
+String defStoreFile = "../chenjunwei.jks"
+
+ext {
+    appName = defAppName
+    packageName = defPackage
+    versionName = defVersionName
+    versionCode = defVersionCode
+    storeFile = defStoreFile
+    keyAlias = defKeyAlias
+    storePassword = defStorePassword
+    keyPassword = defKeyPassword
+}

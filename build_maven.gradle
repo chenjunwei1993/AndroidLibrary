@@ -1,0 +1,18 @@
+//Maven 库，分离的单一功能点存放地址
+//核心库
+String mavenHostLibrary = "http://localhost:8081/repository/viroyal_android_release/"
+String mavenGroupIdLibrary = "com.viroyal.android.core"
+
+String mavenusername = "admin"
+String mavenpwd = "viroyal123"
+String packaging = "aar"
+
+ext {
+    //通用资源
+    MavenUserName = mavenusername
+    MavenPWD = mavenpwd
+    MavenPacking = packaging
+    //mxu 内的资源
+    MavenHostLibrary = mavenHostLibrary
+    MavenGroupIdLibrary = mavenGroupIdLibrary
+}

@@ -1,0 +1,118 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+apply from: '../build_project.gradle'
+
+//aar资源路径
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+android {
+    compileSdkVersion rootProject.compileSdkVersion
+    useLibrary 'org.apache.http.legacy'
+
+    //设置签名信息
+    signingConfigs {
+        debug {
+            //填写之前Eclipse-Build里面的默认路径
+            storeFile file(rootProject.storeFile)
+            keyAlias rootProject.keyAlias
+            storePassword rootProject.storePassword
+            keyPassword rootProject.keyPassword
+        }
+        release {
+            //填写之前Eclipse-Build里面的默认路径
+            storeFile file(rootProject.storeFile)
+            keyAlias rootProject.keyAlias
+            storePassword rootProject.storePassword
+            keyPassword rootProject.keyPassword
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+//    flavorDimensions "xiaomi","baidu","wandoujia","_360"
+//    productFlavors {
+//        xiaomi {dimension "xiaomi"}
+//        baidu {dimension "baidu"}
+//        wandoujia {dimension "wandoujia"}
+//        _360 {dimension "_360"}
+//    }
+//
+//    productFlavors.all {
+//        flavor -> flavor.manifestPlaceholders = [GRIDSUM_Channel_Value: name]
+//    }
+
+    //编译基本配置
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.debug
+            rootProject.debugMode = "true"
+            buildConfigField "boolean", "LOG_DEBUG", "true"
+            buildConfigField "Boolean", "DEBUG_MODE", rootProject.debugMode
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        release {
+            signingConfig signingConfigs.release
+            rootProject.debugMode = "false"
+            buildConfigField "boolean", "LOG_DEBUG", "false"
+            buildConfigField "Boolean", "DEBUG_MODE", rootProject.debugMode
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    /**命令设置打包  可以试用参数进行设置
+     * @author chenjunwei* @deprecated gradle assembleRelease  -PgetuiId=1173891227132 -PjpushId=12122  -Pversioncode=10 -Pversionname=1.0.4 -Ppackagename=com.android.hoge.app.debug
+     */
+    defaultConfig {
+        applicationId = rootProject.packageName
+        versionName = rootProject.versionName
+        versionCode = rootProject.versionCode
+        minSdkVersion rootProject.minSdkVersion
+        targetSdkVersion rootProject.targetSdkVersion
+
+        // dex突破65535的限制
+        multiDexEnabled true
+        //占位符  AndroidManifest使用 如${AMAP_KEY}
+        manifestPlaceholders = [
+                MINESDKVERSION  : rootProject.minSdkVersion,
+                TARGETSDKVERSION: rootProject.targetSdkVersion,
+                APP_NAME        : rootProject.appName,
+                VERSION_NAME    : rootProject.versionName,
+                VERSION_CODE    : rootProject.versionCode,
+                PACKAGE_NAME    : rootProject.packageName,
+        ]
+        ndk {
+            // 设置支持的 SO 库构架
+            //''armeabi-v7a','armeabi','arm64-v8a', 'x86', 'x86_64', 'mips', 'mips64'
+            abiFilters 'armeabi'
+
+        }
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [moduleName: project.getName()]
+            }
+        }
+    }
+
+    // 忽略校验png格式图片
+    aaptOptions {
+        cruncherEnabled = false
+    }
+    //取消检查
+    lintOptions {
+        abortOnError false
+    }
+
+    dependencies {
+        api fileTree(dir: 'libs', include: ['*.jar'])
+    }
+}

@@ -1,0 +1,8 @@
+include ':app'
+include ':LibraryNetWork'
+include ':LibraryImageLoader'
+include ':LibraryCoreUtil'
+include ':LibraryGreenDao'
+include ':libraryDownloader'
+
+

@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">AndroidLibrary</string>
+    <string name="del_file_error_empty">已经为空文件夹</string>
+    <string name="del_cache_files">删除所有已下载文件</string>
+    <string name="deleted_file" formatted="false">已删除: %s</string>
+    <string name="start_single_task" formatted="false">启动单任务下载: %s</string>
+    <string name="start_multiple_tasks_parallel" formatted="false">启动%d个任务并行下载</string>
+    <string name="start_multiple_tasks_serial" formatted="false">启动%d个任务串行下载</string>
+</resources>

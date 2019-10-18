@@ -1,0 +1,41 @@
+<resources>
+    <!-- 时间 -->
+    <string name="yesterday_str">昨天</string>
+    <string name="today_str">今天</string>
+    <string name="tomorrow_str">明天</string>
+    <string name="days_later_str">天后</string>
+    <string name="the_day_after_tomorrow_str">明天</string>
+    <string name="time_naver">从未</string>
+    <string name="time_justnow">刚刚</string>
+    <string name="time_seconds_ago"> 秒钟前</string>
+    <string name="time_mins_ago"> 分钟前</string>
+    <string name="time_hour_ago"> 小时前</string>
+    <string name="time_day_ago"> 天前</string>
+    <string name="day">天</string>
+    <string name="hour">小时</string>
+    <string name="minute">分</string>
+    <string name="video_second">秒</string>
+    <string name="year">年</string>
+    <string name="month">月</string>
+    <string name="sun">日</string>
+    <string-array name="week_array">
+        <item>周日</item>
+        <item>周一</item>
+        <item>周二</item>
+        <item>周三</item>
+        <item>周四</item>
+        <item>周五</item>
+        <item>周六</item>
+    </string-array>
+
+    <string-array name="week_array2">
+        <item>星期天</item>
+        <item>星期一</item>
+        <item>星期二</item>
+        <item>星期三</item>
+        <item>星期四</item>
+        <item>星期五</item>
+        <item>星期六</item>
+    </string-array>
+
+</resources>

@@ -1,0 +1,11 @@
+dependencies {
+    api project(':LibraryNetWork')
+    api project(':LibraryImageLoader')
+    api project(':LibraryCoreUtil')
+    api project(':LibraryGreenDao')
+    api project(':libraryDownloader')
+}
+
+
+
+

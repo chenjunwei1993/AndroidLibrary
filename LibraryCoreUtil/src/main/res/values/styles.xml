@@ -1,0 +1,6 @@
+<resources>
+    <style name="AnimScale" parent="@android:style/Animation">
+        <item name="android:windowEnterAnimation">@anim/push_scale_in</item>
+        <item name="android:windowExitAnimation">@anim/push_scale_out</item>
+    </style>
+</resources>

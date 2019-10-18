@@ -1,0 +1,73 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'maven'
+
+String moduleName = "LibraryNetWork"
+
+android {
+    compileSdkVersion rootProject.compileSdkVersion
+    useLibrary 'org.apache.http.legacy'
+    defaultConfig {
+        minSdkVersion rootProject.minSdkVersion
+        targetSdkVersion rootProject.targetSdkVersion
+        versionCode rootProject.versionCode
+        versionName rootProject.versionName
+        buildConfigField "Boolean", "DEBUG_MODE", rootProject.debugMode
+    }
+
+    // 忽略校验png格式图片
+    aaptOptions {
+        cruncherEnabled = false
+    }
+
+    //取消检查
+    lintOptions {
+        abortOnError false
+    }
+
+    //上传源码后可查看注释
+    task sourcesJar(type: Jar) {
+        from android.sourceSets.main.java.srcDirs
+        classifier = 'sources'
+    }
+    artifacts {
+        archives sourcesJar
+    }
+
+    uploadArchives {
+        repositories.mavenDeployer {
+            repository(url: rootProject.MavenHostLibrary) {
+                authentication(userName: rootProject.MavenUserName, password: rootProject.MavenPWD)
+            }
+            pom.groupId = rootProject.MavenGroupIdLibrary
+            pom.packaging = rootProject.MavenPacking
+            pom.artifactId = moduleName
+            pom.version = "${LibraryNetWork}"
+        }
+    }
+
+    //设置输出aar文件名称
+    libraryVariants.all { variant ->
+        variant.outputs.all {
+            outputFileName = moduleName + rootProject.preVersion + '.aar'
+        }
+    }
+
+    //下面看情况添加，一般不用，添加上面的apply 就可以了
+    kapt {
+        generateStubs = true
+    }
+
+}
+
+dependencies {
+    api fileTree(dir: 'libs', include: ['*.jar'])
+    api "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    api 'com.squareup.retrofit2:retrofit:2.4.0'
+    api 'com.squareup.retrofit2:converter-gson:2.4.0'
+    api 'com.squareup.retrofit2:adapter-rxjava:2.2.0'
+    api 'com.squareup.okhttp3:logging-interceptor:3.6.0'
+    api 'io.reactivex:rxandroid:1.2.1'
+    api 'io.reactivex:rxjava:1.2.9'
+}

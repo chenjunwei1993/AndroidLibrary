@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+    <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_delete_downloader"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="20dp"
+            android:text="删除所有已下载文件" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_single_downloader"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="20dp"
+            android:text="单任务下载测试" />
+
+    <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_multi_serial_downloader"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="20dp"
+            android:text="多任务队列串行下载" />
+
+    <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_multi_parallel_downloader"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="20dp"
+            android:text="多任务队列并行下载" />
+
+
+    <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+        <TextView
+                android:id="@+id/download_msg_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="12sp" />
+    </ScrollView>
+
+    <TextView
+            android:id="@+id/tip_msg_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="0.5"
+            android:textColor="@color/colorAccent"
+            android:textSize="16sp" />
+
+
+</LinearLayout>
