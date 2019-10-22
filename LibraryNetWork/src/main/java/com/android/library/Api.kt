@@ -26,6 +26,7 @@ class Api {
 
     var connectTimeOut = DEFAULT_TIME_OUT
 
+
     var readTimeOut = DEFAULT_TIME_OUT
 
     var writeTimeOut = DEFAULT_TIME_OUT
@@ -41,9 +42,15 @@ class Api {
         /**
          * https://blog.csdn.net/calm1516/article/details/83025640
          */
-        val api: Api by lazy(mode = LazyThreadSafetyMode.SYNCHRONIZED) { Api() }
+//        val api: Api by lazy(mode = LazyThreadSafetyMode.SYNCHRONIZED) { Api() }
+
+        val api = ApiHolder.holder
 
         private const val DEFAULT_TIME_OUT: Long = 12L
+    }
+
+    private object ApiHolder {
+        val holder= Api()
     }
 
     @Synchronized

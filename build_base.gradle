@@ -5,6 +5,9 @@ dependencies {
     api "androidx.drawerlayout:drawerlayout:$drawerlayout"
     api "androidx.legacy:legacy-support-v4:$appcompat_v4"
     api "androidx.appcompat:appcompat:${appcompat_v7}"
+    api "androidx.recyclerview:recyclerview:${recyclerview}"
+    api "androidx.fragment:fragment:${fragment}"
+    api "androidx.viewpager:viewpager:${viewpager}"
     api "com.google.code.gson:gson:$gson"
     api "com.alibaba:fastjson:$fastjson"
 }
