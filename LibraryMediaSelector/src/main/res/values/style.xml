@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="MediaSelectorBase" parent="android:Theme.Holo.Light.Dialog"></style>
+
+    <style name="MediaSelectorDialog" parent="MediaSelectorBase">
+        <item name="android:windowFrame">@null</item>
+        <!-- 边框 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 是否浮现在activity之上 -->
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <!-- 无标题 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!-- 背景透明 -->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!-- 模糊 -->
+    </style>
+
+    <style name="MediaSelectorDialog_BottomAnim" parent="MediaSelectorDialog">
+        <item name="android:windowAnimationStyle">@style/MediaSelectorDialogAnimation</item>
+    </style>
+
+    <style name="MediaSelectorDialogAnimation" parent="@android:style/Animation.Dialog">
+        <item name="android:windowEnterAnimation">@anim/dialog_drop_in</item>
+        <item name="android:windowExitAnimation">@anim/dialog_alpha_out</item>
+    </style>
+
+</resources>

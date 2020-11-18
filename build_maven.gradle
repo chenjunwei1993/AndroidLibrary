@@ -1,10 +1,10 @@
 //Maven 库，分离的单一功能点存放地址
 //核心库
-String mavenHostLibrary = "http://localhost:8081/repository/viroyal_android_release/"
-String mavenGroupIdLibrary = "com.viroyal.android.core"
+String mavenHostLibrary = "http://172.20.254.230:8081/nexus/content/repositories/releases/"
+String mavenGroupIdLibrary = "com.android.library"
 
 String mavenusername = "admin"
-String mavenpwd = "viroyal123"
+String mavenpwd = "admin123"
 String packaging = "aar"
 
 ext {

@@ -2,6 +2,7 @@ dependencies {
     api "androidx.annotation:annotation:$annotation"
     api "androidx.core:core:$core"
     api "androidx.coordinatorlayout:coordinatorlayout:$coordinatorlayout"
+    api "androidx.constraintlayout:constraintlayout:$constraintlayout"
     api "androidx.drawerlayout:drawerlayout:$drawerlayout"
     api "androidx.legacy:legacy-support-v4:$appcompat_v4"
     api "androidx.appcompat:appcompat:${appcompat_v7}"

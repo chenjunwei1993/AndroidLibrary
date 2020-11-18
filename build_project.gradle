@@ -1,9 +1,13 @@
 dependencies {
     api project(':LibraryNetWork')
-    api project(':LibraryImageLoader')
+//    api project(':LibraryImageLoader')
     api project(':LibraryCoreUtil')
     api project(':LibraryGreenDao')
-    api project(':libraryDownloader')
+    api project(':LibraryDownloader')
+    api project(':LibraryEventBus')
+    api project(':LibraryMediaSelector')
+//    api project(':LibraryPhoenixUi')
+//    api project(':LibraryPhoenixCore')
 }
 
 

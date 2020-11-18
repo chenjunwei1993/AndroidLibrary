@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">LibraryMediaSelector</string>
+    <string name="dialog_style2_title">设置头像</string>
+    <string name="dialog_style2_camera">从相机选择</string>
+    <string name="dialog_style2_gallary">从图库选择</string>
+    <string name="dialog_style1_title">修改头像</string>
+    <string name="dialog_style1_camera">打开相机拍照</string>
+    <string name="dialog_style1_gallary">从相册中选择</string>
+    <string name="ucenter_cancel">取消</string>
+
+</resources>

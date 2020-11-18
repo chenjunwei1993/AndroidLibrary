@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="app_color_53575e">#53575e</color>
+    <color name="app_color_9b">#9b9b9b</color>
+    <color name="app_color_black">#000000</color>
+    <color name="app_color_blue">#7D7DFF</color>
+    <color name="app_color_c51">#f94c51</color>
+    <color name="app_color_divider">#B6B6B6</color>
+    <color name="app_color_e0ff6100">#E0FF6100</color>
+    <color name="app_color_f6">#f6f6f6</color>
+    <color name="app_color_fa">#fafafa</color>
+    <color name="app_color_green">#43c117</color>
+    <color name="app_color_grey">#393a3e</color>
+    <color name="app_color_red">#FF0000</color>
+    <color name="app_color_transparent">#00000000</color>
+    <color name="app_color_white">#FFFFFF</color>
+    <color name="app_color_white_transparent">#E0DBDBDB</color>
+    <string name="app_name">LibraryMediaSelector</string>
+    <string name="dialog_style1_camera">打开相机拍照</string>
+    <string name="dialog_style1_gallary">从相册中选择</string>
+    <string name="dialog_style1_title">修改头像</string>
+    <string name="dialog_style2_camera">从相机选择</string>
+    <string name="dialog_style2_gallary">从图库选择</string>
+    <string name="dialog_style2_title">设置头像</string>
+    <string name="ucenter_cancel">取消</string>
+    <style name="MediaSelectorBase" parent="android:Theme.Holo.Light.Dialog"/>
+    <style name="MediaSelectorDialog" parent="MediaSelectorBase">
+        <item name="android:windowFrame">@null</item>
+        
+        <item name="android:windowIsFloating">true</item>
+        
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        
+        <item name="android:windowBackground">@android:color/transparent</item>
+        
+        <item name="android:backgroundDimEnabled">true</item>
+        
+    </style>
+    <style name="MediaSelectorDialogAnimation" parent="@android:style/Animation.Dialog">
+        <item name="android:windowEnterAnimation">@anim/dialog_drop_in</item>
+        <item name="android:windowExitAnimation">@anim/dialog_alpha_out</item>
+    </style>
+    <style name="MediaSelectorDialog_BottomAnim" parent="MediaSelectorDialog">
+        <item name="android:windowAnimationStyle">@style/MediaSelectorDialogAnimation</item>
+    </style>
+</resources>

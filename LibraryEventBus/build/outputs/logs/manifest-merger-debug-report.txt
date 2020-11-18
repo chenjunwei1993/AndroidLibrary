@@ -1,0 +1,39 @@
+-- Merging decision tree log ---
+manifest
+ADDED from D:\studyFile\AndroidLibrary\LibraryEventBus\src\main\AndroidManifest.xml:1:1-7:12
+INJECTED from D:\studyFile\AndroidLibrary\LibraryEventBus\src\main\AndroidManifest.xml:1:1-7:12
+INJECTED from D:\studyFile\AndroidLibrary\LibraryEventBus\src\main\AndroidManifest.xml:1:1-7:12
+INJECTED from D:\studyFile\AndroidLibrary\LibraryEventBus\src\main\AndroidManifest.xml:1:1-7:12
+INJECTED from D:\studyFile\AndroidLibrary\LibraryEventBus\src\main\AndroidManifest.xml:1:1-7:12
+INJECTED from D:\studyFile\AndroidLibrary\LibraryEventBus\src\main\AndroidManifest.xml:1:1-7:12
+INJECTED from D:\studyFile\AndroidLibrary\LibraryEventBus\src\main\AndroidManifest.xml:1:1-7:12
+	package
+		ADDED from D:\studyFile\AndroidLibrary\LibraryEventBus\src\main\AndroidManifest.xml:1:11-54
+		INJECTED from D:\studyFile\AndroidLibrary\LibraryEventBus\src\main\AndroidManifest.xml
+		INJECTED from D:\studyFile\AndroidLibrary\LibraryEventBus\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from D:\studyFile\AndroidLibrary\LibraryEventBus\src\main\AndroidManifest.xml
+		ADDED from D:\studyFile\AndroidLibrary\LibraryEventBus\src\main\AndroidManifest.xml:1:1-7:12
+		INJECTED from D:\studyFile\AndroidLibrary\LibraryEventBus\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from D:\studyFile\AndroidLibrary\LibraryEventBus\src\main\AndroidManifest.xml:1:1-7:12
+	android:versionCode
+		INJECTED from D:\studyFile\AndroidLibrary\LibraryEventBus\src\main\AndroidManifest.xml
+		ADDED from D:\studyFile\AndroidLibrary\LibraryEventBus\src\main\AndroidManifest.xml:1:1-7:12
+		INJECTED from D:\studyFile\AndroidLibrary\LibraryEventBus\src\main\AndroidManifest.xml
+application
+ADDED from D:\studyFile\AndroidLibrary\LibraryEventBus\src\main\AndroidManifest.xml:3:5-5:19
+uses-sdk
+INJECTED from D:\studyFile\AndroidLibrary\LibraryEventBus\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from D:\studyFile\AndroidLibrary\LibraryEventBus\src\main\AndroidManifest.xml
+INJECTED from D:\studyFile\AndroidLibrary\LibraryEventBus\src\main\AndroidManifest.xml
+INJECTED from D:\studyFile\AndroidLibrary\LibraryEventBus\src\main\AndroidManifest.xml
+INJECTED from D:\studyFile\AndroidLibrary\LibraryEventBus\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from D:\studyFile\AndroidLibrary\LibraryEventBus\src\main\AndroidManifest.xml
+		ADDED from D:\studyFile\AndroidLibrary\LibraryEventBus\src\main\AndroidManifest.xml
+		INJECTED from D:\studyFile\AndroidLibrary\LibraryEventBus\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from D:\studyFile\AndroidLibrary\LibraryEventBus\src\main\AndroidManifest.xml
+		ADDED from D:\studyFile\AndroidLibrary\LibraryEventBus\src\main\AndroidManifest.xml
+		INJECTED from D:\studyFile\AndroidLibrary\LibraryEventBus\src\main\AndroidManifest.xml

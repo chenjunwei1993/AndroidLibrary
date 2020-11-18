@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/dialog_title"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/title_round_background_white"
+        android:gravity="center"
+        android:text="@string/dialog_style1_title"
+        android:textColor="#999"
+        android:textSize="15sp" />
+
+    <include layout="@layout/grey_line_slim" />
+
+    <LinearLayout
+        android:id="@+id/select_gallery_layout"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="#fff"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/gallery_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dialog_style1_gallary"
+            android:textColor="#030303"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <include layout="@layout/grey_line_slim" />
+
+    <LinearLayout
+        android:id="@+id/select_camera_layout"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="#fff"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/camera_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dialog_style1_camera"
+            android:textColor="#030303"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/dialog_cancel_btn"
+        android:layout_width="fill_parent"
+        android:layout_height="45dip"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/bottom_round_background_white"
+        android:gravity="center"
+        android:text="@string/ucenter_cancel"
+        android:textColor="#999"
+        android:textSize="16sp" />
+
+</LinearLayout>
